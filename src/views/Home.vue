@@ -50,7 +50,7 @@
                         <v-col cols="12">
                           <div class="colorPicker margin-bottom" :id="device.id"> {{ generateColor() }}</div>
                           <p class="title">Animations:</p>
-                          <v-slider thumb-label v-model="device.status.speed" @input="device.webSocket.send('d' + device.status.speed)" step="1" value="32" min="0" max="500"></v-slider>
+                          <v-slider thumb-label v-model="device.status.speed" @input="device.webSocket.send('d' + device.status.speed)" step="1" value="50" min="0" max="100"></v-slider>
                           <v-btn class="margin-right margin-bottom" color="primary" :outlined="device.status.animation == 1" @click="setAnimation(device, 1)">Still</v-btn>
                           <v-btn class="margin-right margin-bottom" color="primary" :outlined="device.status.animation == 2" @click="setAnimation(device, 2)">Fading</v-btn>
                           <v-btn class="margin-right margin-bottom" color="primary" :outlined="device.status.animation == 3" @click="setAnimation(device, 3)">Blink</v-btn>
@@ -169,7 +169,7 @@ export default {
               b: 255,
             },
             animation: 0,
-            speed: 32,
+            speed: 50,
             on: false
           }
 

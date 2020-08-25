@@ -1,0 +1,1 @@
+start http-server "C:\Users\Delivator\Documents\GitHub\wifi-rgb-led-ui\dist" -p 80
